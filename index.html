@@ -93,20 +93,49 @@
             box-shadow: 0 0 15px #000;
         }
 
+        /* Polaroid Grid */
         .image-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 25px;
+            display: flex;
+            justify-content: center;
+            gap: 0px;
         }
 
-        .image-grid img {
-            width: 100%;
-            height: 220px;
-            object-fit: cover;
-            border-radius: 12px;
-            border: 3px solid #d4af37;
-            box-shadow: 0 0 10px #000;
+        .polaroid {
+            background: white;
+            padding: 10px 10px 25px 10px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.6);
+            position: relative;
+            margin-left: -20px;
+            margin-right: -20px;
+            z-index: 1;
+            transition: transform 0.2s, z-index 0.2s;
         }
+
+        .polaroid:hover {
+            transform: scale(1.15);
+            z-index: 10;
+        }
+
+        .polaroid img {
+            width: auto;
+            height: 200px;
+            object-fit: contain;
+        }
+
+        .polaroid .caption {
+            font-family: "Comic Sans MS", "Bradley Hand", cursive;
+            font-size: 1rem;
+            margin-top: 8px;
+            color: #333;
+        }
+
+        /* individuelle Rotationen */
+        .rotate1 { transform: rotate(-4deg); }
+        .rotate2 { transform: rotate(2deg); }
+        .rotate3 { transform: rotate(-2deg); }
+        .rotate4 { transform: rotate(3deg); }
+
     </style>
 </head>
 
@@ -143,15 +172,30 @@
     <!-- Trennlinie -->
     <div class="section-divider"></div>
 
-    <!-- UNTERER BEREICH MIT 4 BILDERN -->
+    <!-- UNTERER BEREICH MIT POLAROID-BILDERN -->
     <div class="lower-section">
 
         <div class="image-grid">
 
-            <img src="https://s1.directupload.eu/images/260205/59qakbwh.png" alt="IC Bild 1">
-            <img src="https://s1.directupload.eu/images/260205/f7o8dvhl.png" alt="IC Bild 2">
-            <img src="https://s1.directupload.eu/images/260205/dzix9f6d.png" alt="IC Bild 3">
-            <img src="https://s1.directupload.eu/images/260205/5kmfldea.png" alt="IC Bild 4">
+            <div class="polaroid rotate1">
+                <img src="https://s1.directupload.eu/images/260205/59qakbwh.png" alt="IC Bild 1">
+                <div class="caption">FirstRecruit-Henry</div>
+            </div>
+
+            <div class="polaroid rotate2">
+                <img src="https://s1.directupload.eu/images/260205/f7o8dvhl.png" alt="IC Bild 2">
+                <div class="caption">FirstRecruit-Henry</div>
+            </div>
+
+            <div class="polaroid rotate3">
+                <img src="https://s1.directupload.eu/images/260205/dzix9f6d.png" alt="IC Bild 3">
+                <div class="caption">FirstRecruit-Henry</div>
+            </div>
+
+            <div class="polaroid rotate4">
+                <img src="https://s1.directupload.eu/images/260205/5kmfldea.png" alt="IC Bild 4">
+                <div class="caption">FirstRecruit-Henry</div>
+            </div>
 
         </div>
 
@@ -159,5 +203,7 @@
 
 </body>
 </html>
+
+
 
 
