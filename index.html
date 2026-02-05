@@ -82,32 +82,34 @@
             box-shadow: 0 0 10px #000;
         }
 
-        /* Unterer Bereich */
+        /* Unterer Bereich – breiter & tiefer */
         .lower-section {
-            padding: 40px;
-            background: rgba(0, 0, 0, 0.25);
+            padding: 60px 40px 80px 40px;
+            background: rgba(0, 0, 0, 0.35);
             border-radius: 15px;
-            width: 85%;
+            width: 95%;
             margin-left: auto;
             margin-right: auto;
-            box-shadow: 0 0 15px #000;
+            box-shadow: inset 0 0 25px rgba(0,0,0,0.6), 0 0 15px #000;
+            position: relative;
         }
 
         /* Polaroid Grid */
         .image-grid {
             display: flex;
-            justify-content: center;
-            gap: 0px;
+            justify-content: space-between;
+            padding: 0 20px;
         }
 
         .polaroid {
             background: white;
             padding: 10px 10px 25px 10px;
             border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.6);
+            box-shadow: 0 6px 14px rgba(0,0,0,0.7);
             position: relative;
-            margin-left: -20px;
-            margin-right: -20px;
+            margin-left: -5px;
+            margin-right: -5px;
+            top: 10px;
             z-index: 1;
             transition: transform 0.2s, z-index 0.2s;
         }
@@ -131,10 +133,10 @@
         }
 
         /* individuelle Rotationen */
-        .rotate1 { transform: rotate(-4deg); }
-        .rotate2 { transform: rotate(2deg); }
-        .rotate3 { transform: rotate(-2deg); }
-        .rotate4 { transform: rotate(3deg); }
+        .rotate1 { transform: rotate(-2deg); }
+        .rotate2 { transform: rotate(1deg); }
+        .rotate3 { transform: rotate(-1deg); }
+        .rotate4 { transform: rotate(2deg); }
 
     </style>
 </head>
@@ -203,6 +205,7 @@
 
 </body>
 </html>
+
 
 
 
