@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>LSSD Uprank Antrag</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #0d1b2a;
+            color: white;
+            text-align: center;
+            padding-top: 80px;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.4rem;
+            margin-bottom: 40px;
+        }
+
+        .btn-container {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        button {
+            padding: 15px 30px;
+            font-size: 1.3rem;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        #yesBtn {
+            background: #2ecc71;
+            color: black;
+        }
+
+        #noBtn {
+            background: #e74c3c;
+            color: black;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>LSSD Uprank Entscheidung</h1>
+    <p>Bitte wählen Sie aus, ob <strong>[DEIN CHARAKTERNAME]</strong> einen Uprank erhalten soll.</p>
+
+    <div class="btn-container">
+        <button id="yesBtn" onclick="alert('Danke! Uprank wurde bestätigt!')">Ja</button>
+        <button id="noBtn">Nein</button>
+    </div>
+
+    <script>
+        const noBtn = document.getElementById("noBtn");
+
+        noBtn.addEventListener("mouseover", () => {
+            const x = Math.random() * (window.innerWidth - 150);
+            const y = Math.random() * (window.innerHeight - 150);
+            noBtn.style.left = x + "px";
+            noBtn.style.top = y + "px";
+        });
+    </script>
+
+</body>
+</html>
