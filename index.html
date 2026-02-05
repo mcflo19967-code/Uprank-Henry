@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>LSSD Uprank Antrag</title>
+
     <style>
         body {
             font-family: Arial, sans-serif;
-            background: linear-gradient(#5a3e1b, #c2a878); /* Braun → Sand Verlauf */
+            background: linear-gradient(#5a3e1b, #c2a878);
             color: #f5e9d3;
             text-align: center;
             padding-top: 80px;
@@ -24,12 +25,24 @@
             margin-bottom: 40px;
         }
 
+        /* GIF rechts neben dem JA-Button */
+        .gif-box {
+            width: 180px;
+            height: 180px;
+        }
+
+        .gif-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
         .btn-container {
             display: flex;
             justify-content: center;
             align-items: center;
             gap: 40px;
-            margin-top: 40px;
+            margin-top: 20px;
         }
 
         button {
@@ -43,7 +56,7 @@
         }
 
         #yesBtn {
-            background: #d4af37; /* Gold Sheriff Badge Style */
+            background: #d4af37;
             color: black;
             box-shadow: 0 0 10px #000;
         }
@@ -59,31 +72,60 @@
             box-shadow: 0 0 10px #000;
         }
 
-        .gif-box {
-            width: 150px;
-            height: 150px;
+        /* Trennlinie */
+        .section-divider {
+            width: 80%;
+            height: 3px;
+            background: #d4af37;
+            margin: 60px auto;
+            border-radius: 2px;
+            box-shadow: 0 0 10px #000;
         }
 
-        .gif-box img {
+        /* Unterer Bereich */
+        .lower-section {
+            padding: 40px;
+            background: rgba(0, 0, 0, 0.25);
+            border-radius: 15px;
+            width: 85%;
+            margin-left: auto;
+            margin-right: auto;
+            box-shadow: 0 0 15px #000;
+        }
+
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+        }
+
+        .image-grid img {
             width: 100%;
-            height: 100%;
-            object-fit: contain;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 12px;
+            border: 3px solid #d4af37;
+            box-shadow: 0 0 10px #000;
         }
     </style>
 </head>
+
 <body>
 
     <h1>LSSD Uprank Entscheidung</h1>
     <p>Bitte wählen Sie aus, ob <strong>[First Recruit] Henry Grande</strong> einen Uprank erhalten soll.</p>
 
     <div class="btn-container">
+
+        <!-- JA BUTTON -->
         <button id="yesBtn" onclick="alert('Danke! Uprank wurde bestätigt!')">Ja</button>
 
-        <!-- GIF neben dem JA Button -->
+        <!-- ⭐ DEIN GIF NEBEN DEM JA BUTTON ⭐ -->
         <div class="gif-box">
-            <img src="https://media.tenor.com/QpIBfnIvRLcAAAAi/i-love-you-love.gif" alt="Meme">
+            <img src="https://media.tenor.com/2tZLxE-tobgAAAAM/i-love-you-love.gif" alt="Meme">
         </div>
 
+        <!-- NEIN BUTTON -->
         <button id="noBtn">Nein</button>
     </div>
 
@@ -98,7 +140,23 @@
         });
     </script>
 
+    <!-- Trennlinie -->
+    <div class="section-divider"></div>
+
+    <!-- ⭐ UNTERER BEREICH MIT 4 BILDERN ⭐ -->
+    <div class="lower-section">
+
+        <div class="image-grid">
+
+            <img src="https://www.directupload.eu/images/240205/59qakbwh.png" alt="IC Bild 1">
+            <img src="https://www.directupload.eu/images/240205/f7o8dvhl.png" alt="IC Bild 2">
+            <img src="https://www.directupload.eu/images/240205/dzix9f6d.png" alt="IC Bild 3">
+            <img src="https://www.directupload.eu/images/240205/5kmfldea.png" alt="IC Bild 4">
+
+        </div>
+
+    </div>
+
 </body>
 </html>
-
 
