@@ -70,10 +70,10 @@
             color: white;
             position: absolute;
             box-shadow: 0 0 10px #000;
-            z-index: 9999; /* Button läuft über die Bilder */
+            z-index: 9999; /* Button läuft über die Polaroids */
         }
 
-        /* Unterer Bereich – ohne Abstand oben */
+        /* Unterer Bereich */
         .lower-section {
             padding: 0;
             background: rgba(0, 0, 0, 0.35);
@@ -84,23 +84,49 @@
             box-shadow: inset 0 0 25px rgba(0,0,0,0.6), 0 0 15px #000;
         }
 
-        /* Bilder in Originalgröße nebeneinander */
-        .image-row {
+        /* Polaroid-Container */
+        .polaroid-row {
             display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
+            justify-content: center;
             gap: 0;
-            width: 100%;
-            padding: 0;
+            padding: 20px 0;
         }
 
-        .image-row img {
+        .polaroid {
+            background: white;
+            padding: 10px 10px 25px 10px;
+            border-radius: 8px;
+            box-shadow: 0 6px 14px rgba(0,0,0,0.7);
+            margin-left: -20px;
+            margin-right: -20px;
+            transform-origin: center;
+            transition: transform 0.2s;
+        }
+
+        .polaroid:hover {
+            transform: scale(1.1);
+            z-index: 10;
+        }
+
+        .polaroid img {
             width: auto;
             height: auto;
-            max-width: 24%; /* 4 Bilder nebeneinander */
-            border: 3px solid #d4af37;
-            object-fit: contain; /* NICHT cover */
+            max-width: 230px; /* Bilder bleiben original, aber passen in die Reihe */
+            object-fit: contain;
         }
+
+        .caption {
+            font-family: "Comic Sans MS", "Bradley Hand", cursive;
+            font-size: 1rem;
+            margin-top: 8px;
+            color: #333;
+        }
+
+        /* leichte Rotationen */
+        .r1 { transform: rotate(-3deg); }
+        .r2 { transform: rotate(2deg); }
+        .r3 { transform: rotate(-1deg); }
+        .r4 { transform: rotate(3deg); }
 
     </style>
 </head>
@@ -135,15 +161,30 @@
         });
     </script>
 
-    <!-- UNTERER BEREICH MIT ORIGINALGROSSEN BILDERN -->
+    <!-- POLAROID-BEREICH -->
     <div class="lower-section">
 
-        <div class="image-row">
+        <div class="polaroid-row">
 
-            <img src="https://s1.directupload.eu/images/260205/59qakbwh.png" alt="IC Bild 1">
-            <img src="https://s1.directupload.eu/images/260205/f7o8dvhl.png" alt="IC Bild 2">
-            <img src="https://s1.directupload.eu/images/260205/dzix9f6d.png" alt="IC Bild 3">
-            <img src="https://s1.directupload.eu/images/260205/5kmfldea.png" alt="IC Bild 4">
+            <div class="polaroid r1">
+                <img src="https://s1.directupload.eu/images/260205/59qakbwh.png">
+                <div class="caption">FirstRecruit H.Grande</div>
+            </div>
+
+            <div class="polaroid r2">
+                <img src="https://s1.directupload.eu/images/260205/f7o8dvhl.png">
+                <div class="caption">FirstRecruit H.Grande</div>
+            </div>
+
+            <div class="polaroid r3">
+                <img src="https://s1.directupload.eu/images/260205/dzix9f6d.png">
+                <div class="caption">FirstRecruit H.Grande</div>
+            </div>
+
+            <div class="polaroid r4">
+                <img src="https://s1.directupload.eu/images/260205/5kmfldea.png">
+                <div class="caption">FirstRecruit H.Grande</div>
+            </div>
 
         </div>
 
