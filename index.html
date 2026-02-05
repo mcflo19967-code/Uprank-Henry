@@ -84,19 +84,22 @@
             box-shadow: inset 0 0 25px rgba(0,0,0,0.6), 0 0 15px #000;
         }
 
-        /* Bilder nahtlos über gesamte Breite */
-        .image-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
+        /* Bilder in Originalgröße nebeneinander */
+        .image-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
             gap: 0;
             width: 100%;
+            padding: 0;
         }
 
-        .image-grid img {
-            width: 100%;
-            height: 260px;
-            object-fit: cover;
+        .image-row img {
+            width: auto;
+            height: auto;
+            max-width: 24%; /* 4 Bilder nebeneinander */
             border: 3px solid #d4af37;
+            object-fit: contain; /* NICHT cover */
         }
 
     </style>
@@ -132,10 +135,10 @@
         });
     </script>
 
-    <!-- UNTERER BEREICH MIT NAHTLOSEN BILDERN -->
+    <!-- UNTERER BEREICH MIT ORIGINALGROSSEN BILDERN -->
     <div class="lower-section">
 
-        <div class="image-grid">
+        <div class="image-row">
 
             <img src="https://s1.directupload.eu/images/260205/59qakbwh.png" alt="IC Bild 1">
             <img src="https://s1.directupload.eu/images/260205/f7o8dvhl.png" alt="IC Bild 2">
@@ -148,7 +151,6 @@
 
 </body>
 </html>
-
 
 
 
